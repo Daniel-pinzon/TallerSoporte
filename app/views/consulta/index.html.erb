@@ -1,0 +1,44 @@
+<div class="container">
+<div class="col-md-4">
+<%= form_with url: consulta_index_path, method: :get do |form| %>
+    <%= form.label :Usuario_id, style: "display: block", class: "text-success fs-2" %>
+    <%= form.select :Usuario_id, options_for_select(Usuario.all.map{|s|[s.nombre + ' ' + s.apellido, s.id]}) %>
+    <%= form.submit %>
+<% end %>
+</div>
+<div>
+
+<br>
+<br>
+<% if @post != nil %>
+<div class="container-md">
+<div class="grid">
+    <div class="g-col-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Fecha</td>
+                    <td>Estado</td>
+                </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <% @post.each do |presta| %>
+                <td><%= presta.estado %></td>
+                <td><%= presta.feha %></td>
+                <td><%= presta.estado %></td>
+            </tr>
+            <% end %>
+        </tbody>
+        <tfood>
+            <td>ID</td>
+            <td>Fecha</td>
+            <td>Estado</td>
+        </tfood>
+    </table>
+   </div> 
+</div>
+</div>
+<% end %>
+

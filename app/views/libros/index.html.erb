@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<h1>Libros</h1>
+<br><br>
+<%= link_to "New libro", new_libro_path, class: "btn btn-success btn-lg" %>
+</div>
+
+<% @libros.each do |libro| %>
+<div id="libros">
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-tittle"><%= libro.titulo %></h5>
+          <p class="card-text"><%= libro.autor %></p>
+          <p class="card-text"><%= libro.anyo %></p>
+          <%= link_to "Show this libro", libro, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </iv>
+  </div>
+</div>
+<% end %>
+
+
+

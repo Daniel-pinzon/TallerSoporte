@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<h1>Usuarios</h1>
+<br><br>
+<%= link_to "New Usuario",  new_usuario_path, class: "btn btn-success btn-lg" %>
+</div>
+
+<% @usuarios.each do |usuario| %>
+<div id="usuarios">
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-tittle"><%= usuario.nombre + ' ' + usuario.apellido %></h5>
+          <p class="card-text"><%= usuario.login %></p>
+          <p class="card-text"><%= usuario.email %></p>
+          <%= link_to "Show this Usuario", usuario, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </iv>
+  </div>
+</div>
+<% end %>
+

@@ -1,0 +1,48 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<h1>Multa</h1>
+<br>
+<%= link_to "New Multa", new_multum_path, class: "btn btn-success btn-lg" %>
+</div>
+<br>
+<div class="container">
+  <div class="mx-auto">
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Valor</td>
+            <td>Fecha</td>
+            <td>Estado</td>
+            <td>Prestamo</td>
+            <td>Ver Multa</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% @multa.each do |multa| %>
+        <tr>
+             <td><%=multa.id %></td>
+             <td><%= multa.estado %></td>
+             <td><%= multa.fecha %></td>
+             <td><%= multa.estado %></td>
+             <td><%= multa.Prestamo_id %></td>
+             <td> <%= link_to "Show this Multa", multa , class: "btn btn-warning" %></td>
+             
+        </tr>
+         <% end %>
+    </tbody>
+    <tfood>
+        <tr>
+            <td>ID</td>
+            <td>Valor</td>
+            <td>Fecha</td>
+            <td>Estado</td>
+            <td>Prestamo</td>
+            <td>Ver Multa</td>
+        </tr>
+    </tfood>
+  </table>  
+</div>
+</div>
+

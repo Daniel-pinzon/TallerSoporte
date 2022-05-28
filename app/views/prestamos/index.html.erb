@@ -1,0 +1,56 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<h1>Prestamos</h1>
+<br>
+<%= link_to "New prestamo", new_prestamo_path, class: "btn btn-success btn-lg" %>
+</div>
+<br>
+<div class="container">
+  <div class="mx-auto">
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Estado</td>
+            <td>Fecha</td>
+            <td>Ver Prestamo</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% @prestamos.each do |prestamo| %>
+        <tr>
+             <td><%= prestamo.id %></td>
+             <td><%= prestamo.estado %></td>
+             <td><%= prestamo.feha %></td>
+             <td><%= link_to "Ver prestamo", prestamo, class: "btn btn-warning" %></td>
+        </tr>
+         <% end %>
+    </tbody>
+    <tfood>
+        <tr>
+            <td>ID</td>
+            <td>Estado</td>
+            <td>Fecha</td>
+            <td>Ver Prestamo</td>
+        </tr>
+    </tfood>
+  </table>  
+</div>
+</div>
+
+<div class="container">
+  <div class="col-sm-6 mx-auto">
+    <%= link_to "Consultar Prestamos de Libros", "/consulta/index", method: :get, class: "btn btn-info" %>
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
